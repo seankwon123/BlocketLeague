@@ -14,9 +14,9 @@ First time users must authenticate by minting an account token with Unique. This
 https://www.canva.com/design/DAGMM-3TEL4/lONbEd396Sv64kD-BTTGTw/view?utm_content=DAGMM-3TEL4&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
 ### Demos
-Demo Video: https://www.youtube.com/watch?v=IH0OHN47dmQ
+Demo Video: https://youtu.be/8IZK5446peY
 
 
 ### Game controls
 - Left Player: W = forward, S = back, A = tilt left, D = tilt right, space = jump (double jump)
-- Right Player: upArrow = forward, downArrow = back, leftArrow = tilt left, rightArrow = tilt right, rightControl = jump (double jump)
+- Right Player: upArrow = forward, downArrow = back, leftArrow = tilt left, rightArrow = tilt right, enter/return = jump (double jump)

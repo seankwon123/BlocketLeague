@@ -82,7 +82,7 @@ public class DriveTwin : MonoBehaviour
 
     void HandleJumping()
     {
-        if (Input.GetKeyDown("right ctrl") && remainingJumps > 0)
+        if (Input.GetKeyDown("return") && remainingJumps > 0)
         {
             Car.AddForce(Vector2.up * jump);
             remainingJumps--;
