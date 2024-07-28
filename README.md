@@ -17,3 +17,8 @@ https://www.canva.com/design/DAGMM-3TEL4/lONbEd396Sv64kD-BTTGTw/view?utm_content
 Demo Video
 Screenshots
 Video with audio
+
+
+### Game controls
+- Left Player: W = forward, S = back, A = tilt left, D = tilt right, space = jump (double jump)
+- Right Player: upArrow = forward, downArrow = back, leftArrow = tilt left, rightArrow = tilt right, rightControl = jump (double jump)
