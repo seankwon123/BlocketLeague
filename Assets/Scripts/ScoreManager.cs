@@ -12,15 +12,21 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private string homePrefix = "HOME: ";
     [SerializeField] private string awaySuffix = " :AWAY";
 
+    [SerializeField] private GameObject homeVictoryScreen;
+    [SerializeField] private GameObject awayVictoryScreen;
+
+
+    private int maxGoals = 1;
     private int homeScore = 0;
     private int awayScore = 0;
 
     private void Awake()
     {
+        // Time.timeScale = 1;
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -30,6 +36,8 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
+
         UpdateScoreDisplay();
     }
 
@@ -50,6 +58,24 @@ public class ScoreManager : MonoBehaviour
         homeScore = 0;
         awayScore = 0;
         UpdateScoreDisplay();
+    }
+
+    private void Update()
+    {
+        if (homeScore == maxGoals) {
+            homeVictoryScreen.SetActive(true);
+            Time.timeScale = 0;
+            // homeVictoryScreen.SetActive(false);
+        }
+
+        else if (awayScore == maxGoals) {
+            awayVictoryScreen.SetActive(true);
+            Time.timeScale = 0;
+            // awayVictoryScreen.SetActive(false);
+
+        }
+
+
     }
 
     private void UpdateScoreDisplay()

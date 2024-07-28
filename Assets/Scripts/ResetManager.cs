@@ -11,13 +11,15 @@ public class ResetManager : MonoBehaviour
 
     private Vector3 carStartPosition;
     private Vector3 ballStartPosition;
+    private Quaternion carStartRotation;
+    private Quaternion ballStartRotation;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -30,6 +32,8 @@ public class ResetManager : MonoBehaviour
         // Store the initial positions
         if (car != null) carStartPosition = car.transform.position;
         if (ball != null) ballStartPosition = ball.transform.position;
+        if (car != null) carStartRotation = car.transform.rotation;
+        if (ball != null) ballStartRotation = ball.transform.rotation;
     }
 
     public void ResetPositions()
@@ -37,6 +41,7 @@ public class ResetManager : MonoBehaviour
         if (car != null)
         {
             car.transform.position = carStartPosition;
+            car.transform.rotation = carStartRotation;
             Rigidbody2D carRb = car.GetComponent<Rigidbody2D>();
             if (carRb != null)
             {
@@ -48,6 +53,7 @@ public class ResetManager : MonoBehaviour
         if (ball != null)
         {
             ball.transform.position = ballStartPosition;
+            ball.transform.rotation = ballStartRotation;
             Rigidbody2D ballRb = ball.GetComponent<Rigidbody2D>();
             if (ballRb != null)
             {

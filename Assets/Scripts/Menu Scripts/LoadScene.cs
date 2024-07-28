@@ -32,4 +32,9 @@ public class LoadScene : MonoBehaviour
     {
         SceneManager.LoadScene("BlocketLeague");
     }
+
+    public void quitGame()
+    {
+        Application.Quit();
+    }
 }
