@@ -66,6 +66,10 @@ Pass the following arguments to the function
 - First player's tokenId 
 - Second player's tokenId
 
+Game controls:
+- Left Player: W = forward, S = back, A = tilt left, D = tilt right, space = jump (double jump)
+- Right Player: upArrow = forward, downArrow = back, leftArrow = tilt left, rightArrow = tilt right, rightControl = jump (double jump)
+
 ```sh
 node ./src/4-play.js 3132 3133 1 2
 ```
