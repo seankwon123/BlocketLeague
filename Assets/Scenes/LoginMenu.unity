@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 676873470}
   - component: {fileID: 676873469}
   - component: {fileID: 676873473}
+  - component: {fileID: 676873474}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -597,6 +598,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btn: {fileID: 1812527045}
   userInput: {fileID: 1070103386}
+--- !u!114 &676873474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676873468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2fc70c335cd1e4dbb5bf3e6d391dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 119134932}
+  userInput: {fileID: 108116365}
 --- !u!1 &744685572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,10 +1984,10 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 0.8414914, b: 0, a: 1}
-    bottomLeft: {r: 1, g: 0.25471687, b: 0.25471687, a: 1}
-    bottomRight: {r: 0.5249956, g: 0.899371, b: 0.38180834, a: 1}
+    topLeft: {r: 0, g: 0, b: 0, a: 1}
+    topRight: {r: 1, g: 0, b: 0, a: 1}
+    bottomLeft: {r: 1, g: 0.8421255, b: 0, a: 1}
+    bottomRight: {r: 1, g: 0, b: 0.15217018, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0

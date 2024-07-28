@@ -35,16 +35,20 @@ public class DisplayMnemonic : MonoBehaviour
 
     private void UpdateMnemonicDisplay()
     {
-        StartCoroutine(WaitABit());
-        text.text = "I Like Rocket League and Blocks";
-        Debug.Log("Get something from NFT");
+        // StartCoroutine(WaitABit());
+
+
+        text.text = "";
+
+
+        // Debug.Log("Get something from NFT");
 
     }
 
-    IEnumerator WaitABit()
-    {
-        yield return new WaitForSeconds(5.0f);
-    }
+    // IEnumerator WaitABit()
+    // {
+    //     yield return new WaitForSeconds(5.0f);
+    // }
 
     // public string GetMnemonic()
     // {
