@@ -5,19 +5,20 @@ import { getRandomInt } from "./utils/random.js";
 // TODO Pull address from wallet instead of passing it as an argument
 // node ./src/create-token.js {collectionId} {address} {nickname}
 // i.e. node ./src/create-token.js 3131 5HRADyd2sEVtpqh3cCdTdvfshMV7oK4xXJyM48i4r9S3TNGH Speedy777
-const createToken = async () => {
-  const args = process.argv.slice(2);
-  if (args.length < 3) {
-    console.error("run this command: node ./src/create-player.js {address} {nickname}");
-    process.exit(1);
-  }
+export async function createToken (nickname) {
+  // const args = process.argv.slice(2);
+  // if (args.length < 3) {
+  //   console.error("run this command: node ./src/create-player.js {address} {nickname}");
+  //   process.exit(1);
+  // }
 
   const collectionId = 3327;
 
 
-  const [_, nickname, owner,] = args;
+  // const [_, nickname, owner,] = args;
 
   const {account, sdk} = await connectSdk();
+  const owner = account.address;
 
   // TODO
   // Get pseudo-random car image for fun
@@ -61,8 +62,12 @@ const createToken = async () => {
   process.exit(0);
 }
 
+// export const token = createToken(nickname).catch(e => {
+//   console.log('Something wrong during token creation');
+//   throw e;
+// });;
 
-createToken().catch(e => {
-  console.log('Something wrong during token creation');
-  throw e;
-});
+// createToken().catch(e => {
+//   console.log('Something wrong during token creation');
+//   throw e;
+// });
