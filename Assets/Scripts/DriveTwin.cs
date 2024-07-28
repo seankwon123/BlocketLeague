@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drive : MonoBehaviour
+public class DriveTwin : MonoBehaviour
 {
 
     private Rigidbody2D Car;
@@ -53,20 +53,19 @@ public class Drive : MonoBehaviour
 
     void HandleDriving()
     {
-        bool forwardInput = Input.GetKey(KeyCode.W);
-        bool backwardInput = Input.GetKey(KeyCode.S);
-
-        // if (horizontalInput != 0)
-        // {
-        //     float speed = horizontalInput > 0 ? forwardSpeed : backwardSpeed;
-        //     SetMotorSpeed(speed);
+        
+        float verticalInput = Input.GetAxis("Vertical");
+        if (verticalInput != 0)
+        {
+            float speed = verticalInput > 0 ? forwardSpeed : backwardSpeed;
+            SetMotorSpeed(speed);
+        }
+        // if (horizontalBackwardInput) {
+        //     SetMotorSpeed(backwardSpeed);
         // }
-        if (backwardInput) {
-            SetMotorSpeed(backwardSpeed);
-        }
-        else if (forwardInput) {
-            SetMotorSpeed(forwardSpeed);
-        }
+        // else if (horizontalForwardInput) {
+        //     SetMotorSpeed(forwardSpeed);
+        // }
         else
         {
             SetMotorSpeed(0);
@@ -83,7 +82,7 @@ public class Drive : MonoBehaviour
 
     void HandleJumping()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && remainingJumps > 0)
+        if (Input.GetKeyDown("right ctrl") && remainingJumps > 0)
         {
             Car.AddForce(Vector2.up * jump);
             remainingJumps--;
@@ -142,11 +141,11 @@ public class Drive : MonoBehaviour
         {
             float tiltInput = 0f;
             
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
                 tiltInput = 1f;
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.RightArrow))
             {
                 tiltInput = -1f;
             }
