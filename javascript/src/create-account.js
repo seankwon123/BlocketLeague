@@ -18,7 +18,7 @@ async function createAccount (nickname) {
 
 }
 
-createAccount('testUser3').catch(e => {
-    console.log('Something wrong during account creation');
-    throw e;
-})
+// createAccount('testUser3').catch(e => {
+//     console.log('Something wrong during account creation');
+//     throw e;
+// })

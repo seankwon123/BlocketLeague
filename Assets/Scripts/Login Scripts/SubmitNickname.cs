@@ -11,8 +11,8 @@ public class SubmitNickname : MonoBehaviour
     public Button btn;
     public TMP_InputField userInput;
 
-    [DllImport("create-account")]
-    private static extern void createAccount(string nickname);
+    [DllImport("__Internal")]
+    private static extern void CreateAccountJS(string nickname);
 
     void Start()
     {
@@ -21,9 +21,12 @@ public class SubmitNickname : MonoBehaviour
 
     private void GetInputOnClick()
     {
-        // Debug.Log("Nickname is: "+ userInput.text);
         Debug.Log("createAccount start");
-        createAccount(userInput.text);
+        #if UNITY_WEBGL && !UNITY_EDITOR
+            CreateAccountJS(userInput.text);
+        #else
+            Debug.Log("CreateAccountJS is only available in WebGL builds");
+        #endif
         Debug.Log("createAccount done");
     }
 
