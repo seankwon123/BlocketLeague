@@ -1,4 +1,4 @@
-What is Blocket League?
+### What is Blocket League?
 Blocket League incorporates the fun of Rocket League into a web3 game built in Unity with Unique Network NFTs to authenticate users and transactions.
 
 ### Description
